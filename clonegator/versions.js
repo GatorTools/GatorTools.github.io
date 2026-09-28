@@ -79,10 +79,6 @@
       return;
     }
 
-    var derniere = releases[0];
-    document.getElementById("derniere-nom").textContent = derniere.name || derniere.tag_name;
-    document.getElementById("derniere-date").textContent = "Publiée le " + date(derniere.published_at);
-
     liste.innerHTML = releases.map(function (r, rang) {
       var liens = fichiers(r).map(function (f) {
         return ' · <a href="' + echapper(f.browser_download_url) + '">' +
@@ -93,7 +89,7 @@
         (rang === 0 ? '<span class="pastille">dernière</span>' : "") + "</h3>" +
         '<div class="doux">' + date(r.published_at) + liens +
         ' · <a href="' + echapper(r.html_url) + '">sur GitHub</a></div>' +
-        '<div class="notes">' + notes(r.body) + "</div>" +
+        (r.body ? '<details class="notes"><summary>Notes</summary>' + notes(r.body) + "</details>" : "") +
         "</li>";
     }).join("");
   }
