@@ -385,3 +385,7 @@ details.notes summary { cursor: pointer; color: var(--doux); }
   .resume tr { display: block; border-bottom: 1px solid var(--ligne); padding: 8px 0; }
   .resume th, .resume td { display: block; width: auto; border: 0; padding: 2px 12px; white-space: normal; }
 }
+
+/* Sur l'accueil, toute la carte d'un logiciel mène à sa page. */
+a.carte.logiciel { color: inherit; text-decoration: none; transition: border-color 0.15s; }
+a.carte.logiciel:hover { border-color: var(--vert-vif); }
