@@ -76,11 +76,10 @@
   <section id="installer">
     <h2>Installer</h2>
 <pre><code><span class="commentaire"># Ajouter le dépôt GatorTools</span>
-sudo wget -qO /etc/apt/keyrings/gatortools.gpg https://gatortools.github.io/apt/gatortools.gpg
-echo "deb [signed-by=/etc/apt/keyrings/gatortools.gpg] https://gatortools.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/gatortools.list
+wget -qO- gatortools.github.io/apt/install.sh | sudo sh
 
 <span class="commentaire"># Installer CloneGator</span>
-sudo apt update &amp;&amp; sudo apt install clonegator</code></pre>
+sudo apt install clonegator</code></pre>
     <p>Puis <code>sudo clonegator</code>. L'ISO live et le paquet .deb : <a href="telecharger.html">Télécharger</a>.</p>
   </section>
 
