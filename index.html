@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GatorTools</title>
+  <meta name="description" content="GatorTools : des logiciels libres pour cloner, sauvegarder et déployer des disques. CloneGator, et bientôt GatorPXE.">
+  <meta property="og:title" content="GatorTools">
+  <meta property="og:description" content="Des outils pour ceux qui préparent des postes.">
+  <meta property="og:image" content="https://gatortools.github.io/img/gatortools.png">
+  <link rel="icon" href="img/icone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="./"><img src="img/icone.png" alt=""><span><span class="vert">Gator</span>Tools</span></a>
+    <nav class="navigation">
+      <a href="./" aria-current="page">Accueil</a>
+      <a href="clonegator/">CloneGator</a>
+      <a href="./#gatorpxe">GatorPXE</a>
+      <a href="https://github.com/GatorTools">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="accroche">
+  <div class="conteneur">
+    <div>
+      <h1>Des outils pour ceux qui<br><em>préparent des postes.</em></h1>
+      <p>GatorTools réunit des logiciels libres pour cloner, sauvegarder et déployer des
+      disques. Ils sont faits pour les techniciens des écoles et des services informatiques :
+      au clavier, sans détour, et sans risque pour le disque d'origine.</p>
+      <div class="boutons">
+        <a class="bouton plein" href="#logiciels">Les logiciels</a>
+        <a class="bouton" href="https://github.com/GatorTools">Sur GitHub</a>
+      </div>
+    </div>
+    <div class="plaque"><img src="img/gatortools.png" width="760" height="454" alt="Logo de GatorTools : un alligator, un engrenage et une clé"></div>
+  </div>
+</div>
+
+<main class="conteneur">
+
+  <section id="logiciels">
+    <h2>Les logiciels</h2>
+    <div class="logiciels">
+      <div class="carte logiciel">
+        <div class="plaque"><img src="img/clonegator-symbole.png" width="360" height="219" alt=""></div>
+        <h3>CloneGator <span class="pastille">disponible</span></h3>
+        <p>Cloner un disque vers plusieurs disques à la fois, le sauvegarder en image et le
+        restaurer. Seules les données utiles sont copiées, et le disque source reste en lecture
+        seule du début à la fin. Sur une clé USB démarrable, ou installé sur une station de
+        clonage.</p>
+        <div class="boutons">
+          <a class="bouton plein" href="clonegator/">Découvrir</a>
+          <a class="bouton" href="clonegator/telecharger.html">Télécharger</a>
+        </div>
+      </div>
+      <div class="carte logiciel" id="gatorpxe">
+        <div class="plaque"><img src="img/gatorpxe-symbole.png" width="360" height="265" alt=""></div>
+        <h3>GatorPXE <span class="pastille attente">en préparation</span></h3>
+        <p>Un serveur de démarrage réseau, prêt en un geste. Les postes démarrent CloneGator
+        par le réseau, sans clé USB. Déposez des images ISO ou WIM dans un dossier, et elles
+        apparaissent au menu de démarrage.</p>
+        <div class="boutons">
+          <a class="bouton" href="https://github.com/GatorTools/GatorPXE">Suivre sur GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Libres et gratuits</h2>
+    <p>Les logiciels GatorTools sont gratuits, pour tout le monde. Leur code est sur
+    <a href="https://github.com/GatorTools">GitHub</a>, sous licence MIT. Ils ne dépendent que
+    d'outils Linux éprouvés, disponibles dans les dépôts de Debian et d'Ubuntu.</p>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <span>GatorTools · Kevin Bélanger · logiciels libres, licence MIT</span>
+    <span><a href="./">Accueil</a> · <a href="clonegator/">CloneGator</a> · <a href="https://github.com/GatorTools">GitHub</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
