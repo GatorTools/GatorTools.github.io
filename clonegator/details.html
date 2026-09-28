@@ -67,7 +67,9 @@
     <p>Le cas courant est un disque de 500 Go qui contient beaucoup moins de données. C'est
     pour ça que CloneGator ne copie que les données utiles, et que la copie intégrale,
     secteur par secteur, reste l'exception.</p>
-    <p>C'est un programme en mode texte, pour la console ou une session SSH, en français.
+    <p>C'est un programme en mode texte, pour la console ou une session SSH, en anglais ou en
+    français au choix : <kbd>F2</kbd> change la langue à tout moment, <kbd>F3</kbd> la disposition
+    du clavier de la console.
     Il ne copie rien lui-même : il pilote des outils Linux éprouvés
     (<code>partclone</code>, <code>sfdisk</code>, <code>zstd</code>), et s'occupe de
     tout ce qui les entoure : choisir, protéger, surveiller, rendre compte.</p>
@@ -288,7 +290,7 @@ Source  SATA1 (sda)    KINGSTON SA400S3, s/n 50026B728399DE13, 480,1 Go
     <div class="tableau">
       <table>
         <tr><th>Quoi</th><th>Où</th></tr>
-        <tr><td>Clé live</td><td>ISO hybride de 250 Mo, basée sur Debian 13 : BIOS et UEFI, Secure Boot compris. Clavier choisi au démarrage, réseau par DHCP, rien de conservé d'un démarrage à l'autre, pas d'accès SSH</td></tr>
+        <tr><td>Clé live</td><td>ISO hybride de 250 Mo, basée sur Debian 13 : BIOS et UEFI, Secure Boot compris. Démarrage direct sur CloneGator, langue et clavier changés par F2 et F3, réseau par DHCP, rien de conservé d'un démarrage à l'autre, pas d'accès SSH</td></tr>
         <tr><td>Paquet</td><td><code>.deb</code> pour Debian et Ubuntu, testé sur Ubuntu 24.04</td></tr>
         <tr><td>Dépendances</td><td><code>python3</code> (3.10 ou plus), <code>partclone</code>, <code>util-linux</code>, <code>fdisk</code>, <code>zstd</code>, <code>smartmontools</code>, <code>ntfs-3g</code>, <code>e2fsprogs</code>, <code>dosfstools</code>, <code>cifs-utils</code>. Toutes dans les dépôts de la distribution.</td></tr>
         <tr><td>Commande</td><td><code>sudo clonegator</code>, droits root nécessaires pour accéder aux disques</td></tr>
