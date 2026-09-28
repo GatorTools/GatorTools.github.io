@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GatorPXE</title>
+  <meta name="description" content="GatorPXE, en préparation : un serveur de démarrage réseau pour Debian et Ubuntu, qui propose aux postes des images démarrables, d'autres serveurs de démarrage et des sauvegardes CloneGator à restaurer.">
+  <meta property="og:title" content="GatorPXE">
+  <meta property="og:description" content="Démarrer les postes du réseau sur vos outils, sans clé USB.">
+  <meta property="og:image" content="https://gatortools.github.io/img/gatorpxe.png">
+  <link rel="icon" href="../img/icone.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href=".././"><img src="../img/icone.png" alt=""><span><span class="vert">Gator</span>Tools</span></a>
+    <nav class="navigation">
+      <a href=".././">Accueil</a>
+      <a href="../clonegator/">CloneGator</a>
+      <a href="../gatorpxe/" aria-current="page">GatorPXE</a>
+      <a href="https://github.com/GatorTools">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="accroche">
+  <div class="conteneur">
+    <div>
+      <p><span class="pastille attente">en préparation</span></p>
+      <h1>Démarrer les postes du réseau.<br><em>Sans clé USB.</em></h1>
+      <div class="boutons">
+        <a class="bouton plein" href="https://github.com/GatorTools/GatorPXE">Suivre sur GitHub</a>
+      </div>
+    </div>
+    <div class="plaque"><img src="../img/gatorpxe.png" width="640" height="474" alt="Logo de GatorPXE"></div>
+  </div>
+</div>
+
+<main class="conteneur">
+
+  <section>
+    <h2>Ce qu'il fera</h2>
+    <p>Un serveur de démarrage réseau (PXE). Les postes qui démarrent dessus voient un menu, construit tout seul :</p>
+    <div class="tableau">
+      <table class="resume">
+        <tr><th>Images démarrables</th><td>déposez un ISO ou un WIM dans un dossier : il apparaît au menu</td></tr>
+        <tr><th>Autres serveurs</th><td>une entrée pour passer sur un autre serveur de démarrage, comme un WDS</td></tr>
+        <tr><th>Sauvegardes CloneGator</th><td>choisissez une sauvegarde, puis le disque : la restauration se fait toute seule</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Simple</h2>
+    <ul>
+      <li>S'installe sur Debian ou Ubuntu, par le dépôt apt de GatorTools.</li>
+      <li>Se règle dans son interface : aucun fichier à modifier.</li>
+      <li>Proxy DHCP en option : pas besoin de toucher au DHCP existant.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <span>GatorTools · Kevin Bélanger · logiciels libres, licence MIT</span>
+    <span><a href=".././">Accueil</a> · <a href="../clonegator/">CloneGator</a> · <a href="https://github.com/GatorTools">GitHub</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

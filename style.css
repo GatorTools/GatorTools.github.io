@@ -379,3 +379,9 @@ kbd {
 .choix h2 { font-size: 1.35rem; }
 .choix.recommande { border-left: 4px solid var(--vert-vif); padding-left: 20px; }
 details.notes summary { cursor: pointer; color: var(--doux); }
+
+/* Sur un écran étroit, chaque description passe sous son titre. */
+@media (max-width: 720px) {
+  .resume tr { display: block; border-bottom: 1px solid var(--ligne); padding: 8px 0; }
+  .resume th, .resume td { display: block; width: auto; border: 0; padding: 2px 12px; white-space: normal; }
+}
