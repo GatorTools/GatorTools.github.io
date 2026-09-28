@@ -116,11 +116,16 @@
         <p>Le plus simple : écrivez la <a href="telecharger.html">clé live</a> sur une clé USB et
         démarrez le PC dessus. CloneGator s'ouvre tout seul, rien à installer, en BIOS comme en
         UEFI avec Secure Boot.</p>
-        <p>Pour une station de clonage, installez plutôt le paquet, sur Ubuntu 24.04 :</p>
-<pre><code>wget github.com/GatorTools/CloneGator/releases/latest/download/clonegator.deb
-sudo apt install ./clonegator.deb</code></pre>
+        <p>Pour une station de clonage, installez plutôt le paquet, sur Debian ou Ubuntu :</p>
+<pre><code><span class="commentaire"># Ajouter le dépôt GatorTools</span>
+sudo wget -qO /etc/apt/keyrings/gatortools.gpg https://gatortools.github.io/apt/gatortools.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gatortools.gpg] https://gatortools.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/gatortools.list
+
+<span class="commentaire"># Installer CloneGator</span>
+sudo apt update &amp;&amp; sudo apt install clonegator</code></pre>
         <p class="doux">apt installe aussi les outils sur lesquels CloneGator s'appuie :
-        partclone, zstd, smartmontools, cifs-utils. Rien d'autre à configurer.</p>
+        partclone, zstd, smartmontools, cifs-utils. Les mises à jour arrivent ensuite avec celles
+        du système.</p>
       </li>
       <li>
         <h3>Lancer</h3>
