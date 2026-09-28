@@ -28,7 +28,6 @@
   <div class="conteneur">
     <strong>CloneGator</strong>
     <a href="./" aria-current="page">Présentation</a>
-    <a href="details.html">Détails</a>
     <a href="telecharger.html">Télécharger</a>
   </div>
 </div>
@@ -39,7 +38,6 @@
       <h1>Cloner, sauvegarder et restaurer des disques.<br><em>Sans jamais toucher à l'original.</em></h1>
       <div class="boutons">
         <a class="bouton plein" href="telecharger.html">Télécharger</a>
-        <a class="bouton" href="details.html">Tout savoir</a>
       </div>
     </div>
     <div class="plaque"><img src="../img/clonegator.png" width="640" height="445" alt="Logo de CloneGator"></div>
@@ -55,51 +53,35 @@
         <tr><th>Cloner</th><td>un disque vers un ou plusieurs disques, en même temps</td></tr>
         <tr><th>Sauvegarder</th><td>un disque dans une image, sur un disque USB ou un partage réseau Windows</td></tr>
         <tr><th>Restaurer</th><td>une image vers un ou plusieurs disques</td></tr>
-        <tr><th>Mode station</th><td>pour une machine à baies : les emplacements réglés une fois, on change les disques et on lance</td></tr>
+        <tr><th>Mode station</th><td>pour une machine à baies : on change les disques et on lance</td></tr>
       </table>
     </div>
-    <p class="doux">Seules les données utiles sont copiées : 23,7 Go vers cinq SSD en 1 min 44 s sur
-    notre station d'essai. Le disque d'origine passe en lecture seule pendant toute l'opération.</p>
+    <img class="capture" src="../img/clonegator-ecran-confirmation.png" width="980" height="270"
+         alt="Écran de confirmation d'un clonage">
   </section>
 
   <section>
-    <h2>Comment l'utiliser</h2>
-    <ol class="etapes">
-      <li>
-        <h3>Choisir l'opération, puis les disques</h3>
-        <p>Chaque disque est désigné par son emplacement (<code>SATA1</code>, <code>USB2</code>…).
-        Ceux qu'on ne peut pas choisir restent visibles, avec la raison.</p>
-        <img class="capture" src="../img/clonegator-ecran-cibles.png" width="980" height="270"
-             alt="Choix des disques cibles d'un clonage">
-      </li>
-      <li>
-        <h3>Vérifier, puis lancer</h3>
-        <p>Un écran récapitule ce qui sera effacé, numéros de série compris. « Annuler » est le choix par défaut.</p>
-        <img class="capture" src="../img/clonegator-ecran-confirmation.png" width="980" height="270"
-             alt="Écran de confirmation d'un clonage">
-      </li>
-      <li>
-        <h3>Lire le rapport</h3>
-        <p>Un verdict par disque, qui reste affiché jusqu'à ce qu'on le lise.</p>
-        <img class="capture" src="../img/clonegator-ecran-rapport.png" width="980" height="225"
-             alt="Rapport d'un clonage réussi">
-      </li>
-    </ol>
-    <p class="touches"><kbd>↑</kbd> <kbd>↓</kbd> ou un numéro pour choisir, <kbd>Entrée</kbd> pour valider,
-    <kbd>Échap</kbd> pour revenir. <kbd>F2</kbd> change la langue (anglais, français),
-    <kbd>F3</kbd> le clavier.</p>
+    <h2>Bon à savoir</h2>
+    <ul>
+      <li>Seules les données utiles sont copiées (NTFS, ext4, FAT, exFAT, XFS, Btrfs, HFS+).</li>
+      <li>Le disque d'origine passe en lecture seule pendant toute l'opération.</li>
+      <li>Les disques du système et ceux qui portent des sauvegardes ne sont jamais proposés comme cible.</li>
+      <li>Chaque disque a son verdict : si l'un échoue, les autres continuent.</li>
+      <li>Les disques sont désignés par leur emplacement : <code>SATA1</code>, <code>NVMe1</code>, <code>USB2</code>.</li>
+      <li>Une sauvegarde se vérifie avec <code>sha256sum</code> et se restaure même sans CloneGator.</li>
+      <li>Anglais ou français (<kbd>F2</kbd>), choix du clavier (<kbd>F3</kbd>).</li>
+    </ul>
   </section>
 
   <section id="installer">
     <h2>Installer</h2>
-    <p>Sur Debian ou Ubuntu :</p>
 <pre><code><span class="commentaire"># Ajouter le dépôt GatorTools</span>
 sudo wget -qO /etc/apt/keyrings/gatortools.gpg https://gatortools.github.io/apt/gatortools.gpg
 echo "deb [signed-by=/etc/apt/keyrings/gatortools.gpg] https://gatortools.github.io/apt stable main" | sudo tee /etc/apt/sources.list.d/gatortools.list
 
 <span class="commentaire"># Installer CloneGator</span>
 sudo apt update &amp;&amp; sudo apt install clonegator</code></pre>
-    <p>Puis <code>sudo clonegator</code>. Sans rien installer : l'<a href="telecharger.html">ISO live</a>.</p>
+    <p>Puis <code>sudo clonegator</code>. L'ISO live et le paquet .deb : <a href="telecharger.html">Télécharger</a>.</p>
   </section>
 
 </main>
